@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{2C3931C9-5256-4FBD-A35B-45446F97FBCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release - Build|Any CPU = Release - Build|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C3931C9-5256-4FBD-A35B-45446F97FBCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C3931C9-5256-4FBD-A35B-45446F97FBCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C3931C9-5256-4FBD-A35B-45446F97FBCD}.Release - Build|Any CPU.ActiveCfg = Release - Build|Any CPU
+		{2C3931C9-5256-4FBD-A35B-45446F97FBCD}.Release - Build|Any CPU.Build.0 = Release - Build|Any CPU
+		{2C3931C9-5256-4FBD-A35B-45446F97FBCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C3931C9-5256-4FBD-A35B-45446F97FBCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
