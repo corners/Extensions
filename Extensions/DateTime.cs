@@ -50,5 +50,39 @@ namespace Extensions
             return result;
         }
 
+
+        public static int WeekNumber(this DateTime date)
+        {
+            var cal = System.Globalization.DateTimeFormatInfo.CurrentInfo.Calendar;
+            return cal.GetWeekOfYear(date, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Sunday);
+        }
+
+        public static DateTime Max(DateTime a, DateTime b)
+        {
+            if (a >= b)
+                return a;
+            else
+                return b;
+        }
+
+        public static DateTime Min(DateTime a, DateTime b)
+        {
+            if (a <= b)
+                return a;
+            else
+                return b;
+        }
+
+        public static IEnumerable<DateTime> DaysInRange(this DateTime from, DateTime toExclusive)
+        {
+            if (toExclusive.Subtract(from).TotalDays < 0)
+                throw new ArgumentException("'from' date must be earlier than 'to' date.");
+
+            var lastDay = toExclusive.AddDays(-1);
+            for (var date = from; date <= lastDay; date = date.AddDays(1))
+            {
+                yield return date.ToMidnight();
+            }
+        }
     }
 }
