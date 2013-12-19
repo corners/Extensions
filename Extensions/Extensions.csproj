@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2C3931C9-5256-4FBD-A35B-45446F97FBCD}</ProjectGuid>
+    <ProjectGuid>{829EA702-1FAF-426D-B42A-7E58107C9B5C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Extensions</RootNamespace>
@@ -66,7 +66,11 @@
   <ItemGroup>
     <Compile Include="DateTime.cs" />
     <Compile Include="Dictionary.cs" />
+    <Compile Include="DisposableCollection.cs" />
+    <Compile Include="IDisposable.cs" />
+    <Compile Include="IEnumerableString.cs" />
     <Compile Include="IEnumerableT.cs" />
+    <Compile Include="MathEx.cs" />
     <Compile Include="Must.cs" />
     <Compile Include="Object.cs" />
     <Compile Include="PathEx.cs" />

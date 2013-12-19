@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Extensions
 {
+    /// <summary>
+    /// Extension methods for IEnumerable T
+    /// </summary>
 	public static class IEnumerableTExtensions
 	{
         public static HashSet<T> ToHashSet<T>(this IEnumerable<T> collection, IEqualityComparer<T> comparer)
@@ -17,13 +20,30 @@ namespace Extensions
             return new HashSet<string>(collection, StringComparer.OrdinalIgnoreCase);
         }
 
-        public static IEnumerable<T> EmptyIfNull<T>(this IEnumerable<T> value)
-		{
-			if (value == null)
-				return new T[] { };
-			else
-				return value;
-		}
+        public static IEnumerable<T> EmptyIfNull<T>(this IEnumerable<T> seq)
+        {
+            return seq ?? Enumerable.Empty<T>();
+        }
+
+        /// <summary>
+        /// Aggregates a collection of objects of type T into a single string separated by a defined value.
+        /// </summary>
+        /// <typeparam name="T">Type of object</typeparam>
+        /// <param name="values">Collection of objects</param>
+        /// <param name="separator">Separator</param>
+        /// <returns>Single string.</returns>
+        public static string AggregateToString<T>(this IEnumerable<T> values, string separator)
+        {
+            return string.Join(separator, values.Select(v => v.ToString()).ToArray());
+        }
+
+        public static string AggregateToString<A, B>(this IEnumerable<A> values, Func<A, B> selector, string separator)
+        {
+            var items = from value in values
+                        select selector(value).ToString();
+
+            return string.Join(separator, items.ToArray());
+        }
 
 		[Obsolete("Use ToDictionary instead")]
 		public static IDictionary<TKey, TValue> ToStandardDictionary<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> values, IEqualityComparer<TKey> comparer)

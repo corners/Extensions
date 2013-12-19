@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Extensions
 {
+    /// <summary>
+    /// Extension methods for Dictionaries
+    /// </summary>
 	public static class DictionaryExtensions
 	{
 		public static IDictionary<TKey, TValue> EmptyIfNull<TKey, TValue>(this IDictionary<TKey, TValue> collection, IEqualityComparer<TKey> comparer)
@@ -63,7 +66,6 @@ namespace Extensions
 		{
 			return DictionaryExtensions.ValueOrDefault(d, key, default(TValue));
 		}
-
 
 		public static void SetValue<TKey, TValue>(this IDictionary<TKey, TValue> d, TKey key, TValue value)
 		{
