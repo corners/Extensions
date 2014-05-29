@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace Extensions
+namespace ZeroTwoTwelve.Extensions
 {
     /// <summary>
     /// Extension methods for objects

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Extensions
+namespace ZeroTwoTwelve.Extensions
 {
     public static class DateTimeExtensions
     {
