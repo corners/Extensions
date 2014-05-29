@@ -15,6 +15,11 @@ namespace ZeroTwoTwelve.Extensions
             return new HashSet<T>(collection, comparer);
         }
 
+        public static HashSet<T> ToHashSet<T>(this IEnumerable<T> collection)
+        {
+            return ToHashSet<T>(collection, EqualityComparer<T>.Default);
+        }
+
         public static HashSet<string> ToHashSetInvariant(this IEnumerable<string> collection)
         {
             return new HashSet<string>(collection, StringComparer.OrdinalIgnoreCase);
@@ -45,13 +50,7 @@ namespace ZeroTwoTwelve.Extensions
             return string.Join(separator, items.ToArray());
         }
 
-		[Obsolete("Use ToDictionary instead")]
-		public static IDictionary<TKey, TValue> ToStandardDictionary<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> values, IEqualityComparer<TKey> comparer)
-		{
-			return values.ToDictionary(p => p.Key, p => p.Value, comparer);
-		}
-
-		public static Dictionary<TKey, TValue> ToDictionary<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> values, IEqualityComparer<TKey> comparer)
+	    public static Dictionary<TKey, TValue> ToDictionary<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> values, IEqualityComparer<TKey> comparer)
 		{
 			return values.ToDictionary(p => p.Key, p => p.Value, comparer);
 		}
