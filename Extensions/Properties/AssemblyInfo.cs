@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ZeroTwoTwelve.Extensions")]
-[assembly: AssemblyDescription("Miscelaneous Extensions and Utilities")]
+[assembly: AssemblyDescription("Miscellaneous Extensions and Utilities")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Dan Ward")]
 [assembly: AssemblyProduct("Extensions")]
 [assembly: AssemblyCopyright("Copyright ©  2012-14")]
 [assembly: AssemblyTrademark("MIT License")]
